@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<RECORDS>
+<RECORD Id="1" Name="草泥马" Img="MonsterImg/1" Type="5" OnlyId="g1"/>
+<RECORD Id="2" Name="小幽灵" Img="MonsterImg/1" Type="5" OnlyId="g2"/>
+<RECORD Id="3" Name="大幽灵" Img="MonsterImg/1" Type="5" OnlyId="g3"/>
+<RECORD Id="4" Name="史莱姆" Img="MonsterImg/1" Type="5" OnlyId="g4"/>
+<RECORD Id="5" Name="萝卜头" Img="MonsterImg/1" Type="5" OnlyId="g5"/>
+<RECORD Id="6" Name="德玛西亚" Img="MonsterImg/1" Type="5" OnlyId="g6"/>
+</RECORDS>

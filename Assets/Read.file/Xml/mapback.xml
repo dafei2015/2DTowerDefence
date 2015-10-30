@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<RECORDS>
+<RECORD Id="1" Name="背景图1" Img="BackImg/1" Type="1" OnlyId="b1"/>
+<RECORD Id="2" Name="背景图2" Img="BackImg/1" Type="1" OnlyId="b2"/>
+<RECORD Id="3" Name="背景图3" Img="BackImg/1" Type="1" OnlyId="b3"/>
+<RECORD Id="4" Name="背景图4" Img="BackImg/1" Type="1" OnlyId="b4"/>
+</RECORDS>

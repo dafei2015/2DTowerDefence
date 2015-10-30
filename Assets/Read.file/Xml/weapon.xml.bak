@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<RECORDS>
+<RECORD Id="1" Name="小鸟抢" Img="WeaponImg/1" Type="4" OnlyId="w1"/>
+<RECORD Id="2" Name="加农炮" Img="WeaponImg/1" Type="4" OnlyId="w2"/>
+<RECORD Id="3" Name="电光炮" Img="WeaponImg/1" Type="4" OnlyId="w3"/>
+<RECORD Id="4" Name="跟踪弹" Img="WeaponImg/1" Type="4" OnlyId="w4"/>
+<RECORD Id="5" Name="便便" Img="WeaponImg/1" Type="4" OnlyId="w5"/>
+<RECORD Id="6" Name="小太阳" Img="WeaponImg/1" Type="4" OnlyId="w6"/>
+<RECORD Id="7" Name="冰太阳" Img="WeaponImg/1" Type="4" OnlyId="w7"/>
+</RECORDS>

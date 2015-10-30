@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<RECORDS>
+<RECORD Id="1" Name="小石头" Img="ObstaclesImg/1" Type="3" OnlyId="z1"/>
+<RECORD Id="2" Name="小彩虹" Img="ObstaclesImg/1" Type="3" OnlyId="z2"/>
+<RECORD Id="3" Name="大彩虹" Img="ObstaclesImg/1" Type="3" OnlyId="z3"/>
+<RECORD Id="4" Name="小树" Img="ObstaclesImg/1" Type="3" OnlyId="z4"/>
+<RECORD Id="5" Name="大树" Img="ObstaclesImg/1" Type="3" OnlyId="z5"/>
+<RECORD Id="6" Name="石堆" Img="ObstaclesImg/1" Type="3" OnlyId="z6"/>
+<RECORD Id="7" Name="树桩" Img="ObstaclesImg/1" Type="3" OnlyId="z7"/>
+</RECORDS>

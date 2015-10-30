@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<RECORDS>
+<RECORD Id="1" Name="路径图1" Img="PathImg/1" Type="2" OnlyId="l1"/>
+<RECORD Id="2" Name="路径图2" Img="PathImg/1" Type="2" OnlyId="l2"/>
+<RECORD Id="3" Name="路径图3" Img="PathImg/1" Type="2" OnlyId="l3"/>
+<RECORD Id="4" Name="路径图4" Img="BackImg/1" Type="2" OnlyId="l4"/>
+</RECORDS>
