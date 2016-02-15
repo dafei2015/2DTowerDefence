@@ -275,7 +275,7 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 3
-  - name: Monsters01-hd_25
+  - name: Monsters02-hd_25
     x: 340
     y: 209
     width: 65
@@ -288,7 +288,7 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: Monsters01-hd_26
+  - name: Monsters02-hd_26
     x: 233
     y: 124
     width: 65
@@ -327,7 +327,7 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: Monsters01-hd_3
+  - name: Monsters02-hd_3
     x: 0
     y: 170
     width: 106

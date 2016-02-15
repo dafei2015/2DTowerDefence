@@ -13,18 +13,39 @@ public class Weapons:MonoBehaviour
     /// </summary>
     public EnemyNode mTrg;
 
+    /// <summary>
+    /// 攻击间隔
+    /// </summary>
+    public float attackTime = 2.5f;
 
+    /// <summary>
+    /// 当前剩余冷却时间
+    /// </summary>
+    public float mTime = 0;
+
+    /// <summary>
+    /// 子弹模型
+    /// </summary>
+    public GameObject bullet;
+    void Start()
+    {
+        mTime = attackTime;
+    }
     void Update()
     {
         FindEnemy();
         AimedAtEnemy();
+        Attack();
     }
+
+    #region 查找对准敌人
+
     /// <summary>
     /// 查找敌人
     /// </summary>
-    void FindEnemy()
+    private void FindEnemy()
     {
-        ArrayList list = GameMgr.instance.enemyList;
+        ArrayList list = GameMgr.instance.GetEnemyList();
         mTrg = null;
         foreach (EnemyNode enemy in list)
         {
@@ -35,12 +56,12 @@ public class Weapons:MonoBehaviour
 
             if (dis > attackRange)
             {
-                Debug.Log(string.Format("敌人{0} 未进入攻击范围，距离：{1}",enemy.name,dis));
+//                Debug.Log(string.Format("敌人{0} 未进入攻击范围，距离：{1}", enemy.name, dis));
             }
             else
             {
                 if (enemy != mTrg) mTrg = enemy;
-                Debug.LogError(string.Format("敌人{0} 进入攻击范围，距离：{1}", enemy.name, dis));
+//                Debug.LogError(string.Format("敌人{0} 进入攻击范围，距离：{1}", enemy.name, dis));
             }
         }
     }
@@ -48,7 +69,7 @@ public class Weapons:MonoBehaviour
     /// <summary>
     /// 对准敌人
     /// </summary>
-    void AimedAtEnemy()
+    private void AimedAtEnemy()
     {
         if (mTrg == null) return;
         Vector3 pos1 = transform.position;
@@ -66,7 +87,7 @@ public class Weapons:MonoBehaviour
     /// </summary>
     /// <param name="v1">第一个向量坐标</param>
     /// <param name="v2">第二个坐标</param>
-    float GetAngle(Vector3 v1, Vector3 v2)
+    private float GetAngle(Vector3 v1, Vector3 v2)
     {
         float dot = Vector3.Dot(v1, v2);
         float mv1 = Mathf.Sqrt(v1.x*v1.x + v1.y*v1.y);
@@ -78,6 +99,29 @@ public class Weapons:MonoBehaviour
         return angle;
     }
 
+    #endregion
+
+    /// <summary>
+    /// 攻击
+    /// </summary>
+    void Attack()
+    {
+        mTime -= Time.deltaTime;
+        //冷却完毕执行攻击操作
+        if(mTime<=0)
+        {
+            if (mTrg == null) return;
+            if(bullet!=null)
+            {
+                GameObject item = Instantiate(bullet) as GameObject;
+                BulletSelf self = item.AddComponent<BulletSelf>();
+                item.transform.position = bullet.transform.position;
+                item.transform.eulerAngles = new Vector3(0, 0, gameObject.transform.localEulerAngles.z + 90);
+                self.InitData(mTrg);
+            }
+            mTime = attackTime;
+        }
+    }
     //绘制攻击范围
     public void OnDrawGizmos()
     {

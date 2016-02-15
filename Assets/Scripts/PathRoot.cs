@@ -26,8 +26,10 @@ public class PathRoot:MonoBehaviour
 
             if (node.nextNode != null)
             {
+                //画直线
                 Gizmos.DrawLine(node.transform.position, node.nextNode.transform.position);                
             }
+            //画方块
             Gizmos.DrawCube(node.transform.position,new Vector3(0.1f,0.1f,0.1f));
         }
     }

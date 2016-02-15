@@ -1,7 +1,13 @@
 ﻿using UnityEngine;
 
+public delegate void DeathCallBack(EnemyNode node);
+
 public class EnemyNode:MonoBehaviour
 {
+    /// <summary>
+    /// 怪物死亡回调
+    /// </summary>
+    public DeathCallBack OnDeathCallBack;
     /// <summary>
     /// 开始节点
     /// </summary>
@@ -12,6 +18,18 @@ public class EnemyNode:MonoBehaviour
     /// </summary>
     public float moveSpeed = 0.15f;
 
+    /// <summary>
+    /// 怪物的当前血量
+    /// </summary>
+    public float Hp =100;
+
+    public float MaxHp = 100.0f;
+    /// <summary>
+    /// 显示血量的Label
+    /// </summary>
+    public UISlider HpSlider;
+
+  
     void Update()
     {
         Move();
@@ -41,4 +59,25 @@ public class EnemyNode:MonoBehaviour
         //移动
         transform.Translate(dir*moveSpeed*Time.deltaTime);
     }
+
+    /// <summary>
+    /// 开始受攻击
+    /// </summary>
+    /// <param name="hp">耗血</param>
+    public void OnBeginAttacked(float hp)
+    {
+        if(this.Hp>0)
+        {
+            this.Hp -= hp;
+        }
+        if(this.HpSlider!= null)
+        {
+            this.HpSlider.value = this.Hp/MaxHp;
+        }
+        if(this.Hp<=0)
+        {
+            OnDeathCallBack(this);
+        }
+    }
 }
+
