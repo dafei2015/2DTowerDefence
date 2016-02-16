@@ -46,7 +46,7 @@ public class EnemyNode:MonoBehaviour
             if (startNode.nextNode == null)
             {
                 Debug.Log("到达终点");
-                Destroy(gameObject);
+                OnDeathCallBack(this);
             }
             else
             {
